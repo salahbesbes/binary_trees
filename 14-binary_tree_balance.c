@@ -23,7 +23,7 @@ int isBalancedRecursive(const binary_tree_t *tree)
 
 /**
  * binary_tree_balance - return the difference between depth_left
- * and depth_right of root tree
+ * and depth_right of root  tree
  * @tree: root Node
  * Return:  int
  */
