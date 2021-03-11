@@ -1,6 +1,11 @@
 #include "binary_trees.h"
 
 
+/**
+ * binary_tree_leaves - return the nb of leaves
+ * @tree: root Node
+ * Return:  size_t
+ */
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {
 	if (tree == NULL)
