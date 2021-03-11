@@ -1,6 +1,11 @@
 #include "binary_trees.h"
 
 
+/**
+ * tree_height - return the height of a tree
+ * @tree: root Node
+ * Return:  int
+ */
 int tree_height(const binary_tree_t *tree)
 {
 	int height_l;
@@ -11,6 +16,11 @@ int tree_height(const binary_tree_t *tree)
 	return (height_l > height_r ? height_l : height_r);
 }
 
+/**
+ * size_tree - return the size of a tree
+ * @tree: root Node
+ * Return:  int
+ */
 int size_tree(const binary_tree_t *tree)
 {
 	if (tree == NULL)
@@ -19,6 +29,12 @@ int size_tree(const binary_tree_t *tree)
 	return (1 + size_tree(tree->left) + size_tree(tree->right));
 }
 
+/**
+ * power - return power of base / exp
+ * @base: int
+ * @exp: int
+ * Return:  int
+ */
 int power(int base, int exp)
 {
 	int result = 1;
@@ -31,10 +47,17 @@ int power(int base, int exp)
 	return (result);
 }
 
+/**
+ * binary_tree_is_perfect -  check if tree is perfect
+ * @tree: root Node
+ * Return:  int
+ */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int height, size;
 
+	if (tree == NULL)
+		return (0);
 	height = tree_height(tree);
 	size = size_tree(tree);
 	return (power(2, height + 1) - 1 == size);
