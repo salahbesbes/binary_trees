@@ -1,7 +1,11 @@
 #include "binary_trees.h"
-#include <math.h>
 
 
+/**
+ * isBalancedRecursive - return the height of tree
+ * @tree: root Node
+ * Return:  int
+ */
 int isBalancedRecursive(const binary_tree_t *tree)
 {
 	int depth_left, depth_right;
@@ -17,6 +21,12 @@ int isBalancedRecursive(const binary_tree_t *tree)
 		return (depth_right + 1);
 }
 
+/**
+ * binary_tree_balance - return the difference between depth_left
+ * and depth_right of root tree
+ * @tree: root Node
+ * Return:  int
+ */
 int binary_tree_balance(const binary_tree_t *tree)
 {
 
